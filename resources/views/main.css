@@ -1,0 +1,10 @@
+.nav{
+	height: 80px;
+}
+.title{
+	height: 80px;
+	width: 400px;
+	float: left;
+	font-size: 25px;
+	text-align: center;
+}

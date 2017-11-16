@@ -1,0 +1,64 @@
+.nav{
+	height: 70px;
+	background-color: #000;
+}
+.title{
+	height: 70px;
+	width: 400px;
+	float: left;
+	font-size: 25px;
+	text-align: center;
+	color: #fff;
+	line-height: 60px;
+}
+.nav .left{
+	float: right;
+	color: #fff;
+	width: 100px;
+	height: 70px;
+	font-size: 20px;
+	line-height: 65px;
+}
+.sider{
+	width: 300px;
+	height: 700px;
+	background-color: #fdd;
+	float: left;
+}
+.sider ul{
+	list-style: none;
+}
+.sider li{
+	font-size: 25px;
+	margin-bottom: 30px;
+}
+.content{
+	width: 900px;
+	height: 700px;
+	float: left;
+}
+.writeletterform{
+	width: 500px;
+	margin-left: 400px;
+	margin-top: 100px;
+}
+.writeletterform label{
+	width: 70px;
+	font-size: 20px;
+}
+.writeletterform input{
+	width: 250px;
+	height: 40px;
+	border-radius: 4px;
+	padding: 0px;
+	border:1px solid #ccd0d2;
+	font-size: 20px;
+}
+.writeletterform textarea{
+	width: 400px;
+	height: 200px;
+}
+.writeletterform button{
+	width: 100px;
+	margin-left: 60px;
+}
