@@ -16,7 +16,7 @@
         <li><a href="{{url('writeletter')}}">写信</a></li>
         <li><a href="{{url('acceptletter')}}">收件箱</a></li>
         <li><a href="{{url('sendletter')}}">发件箱</a></li>
-        <li><a href="#">日程安排</a></li>
+        <li><a href="{{url('schedule')}}">日程安排</a></li>
     </ul>
 </div>
 <div class="content">
