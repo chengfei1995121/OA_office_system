@@ -11,12 +11,25 @@
 <div class="left"><a href="#">退出</a></div>
 </div>
 <div class="sider">
+<div class="gongneng">功能导航</div>
     <ul>
-        <li><a href="{{url('home')}}">首页</a></li>
+        <li class="firstnav"><a href="{{url('home')}}">首页</a></li>
+        <li class="firstnav" onclick="document.getElementById('id1').style.display='block'">短信箱
+        <ul class="secondnav" id="id1">
         <li><a href="{{url('writeletter')}}">写信</a></li>
         <li><a href="{{url('acceptletter')}}">收件箱</a></li>
         <li><a href="{{url('sendletter')}}">发件箱</a></li>
-        <li><a href="{{url('schedule')}}">日程安排</a></li>
+        </ul>
+        </li>
+        <li class="firstnav" onclick="document.getElementById('id2').style.display='block'">
+        日程安排
+        <ul class="secondnav" id="id2">
+        <li><a href="{{url('schedule')}}">日程表</a></li>
+        <li><a href="#">添加事务</a></li>
+        </ul>
+        </li>
+        <li class="firstnav"><a href="#">课程表</a></li>
+        <li class="firstnav"><a href="#">文章</a></li>
     </ul>
 </div>
 <div class="content">

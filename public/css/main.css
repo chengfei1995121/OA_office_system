@@ -1,6 +1,6 @@
 .nav{
 	height: 70px;
-	background-color: #000;
+	background-color: #38464f;
 }
 .title{
 	height: 70px;
@@ -20,17 +20,39 @@
 	line-height: 65px;
 }
 .sider{
-	width: 300px;
+	width: 250px;
 	height: 700px;
-	background-color: #fdd;
+	background-color: #293437;
 	float: left;
+	border:1px solid #000;
+	border-radius:5px;
+	margin-right: 20px;
+}
+.sider .gongneng{
+	height: 50px;
+	font-size: 30px;
+	padding-left: 30px;
 }
 .sider ul{
 	list-style: none;
+	margin-left: 0px;
+	padding:0px;
 }
 .sider li{
-	font-size: 25px;
-	margin-bottom: 30px;
+
+}
+.sider .firstnav{
+	font-size: 27px;
+	background-color:#293437;
+	margin-bottom: 5px;
+	padding-left: 30px;
+	color: #4c97d2;
+	cursor:pointer;
+}
+.sider .secondnav{
+	padding-left: 15px;
+	font-size: 20px;
+	display: none;
 }
 .content{
 	width: 900px;

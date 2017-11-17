@@ -10,7 +10,7 @@ class scheduleController extends Controller
     //
     public function show()
     {
-    	$result=DB::select("select * from schedule where status=0");
+    	$result=DB::select("select * from schedule where 1 order by id desc");
     	if(!empty($result))
     		return view('schedule',['result'=>$result]);
     	else
@@ -34,5 +34,10 @@ class scheduleController extends Controller
     	{
     		return redirect('schedule/addwork');
     	}
+    }
+    public function complete($id)
+    {
+    	$r=DB::update("update schedule set status=1 where id=?",[$id]);
+    	return redirect('schedule');
     }
 }

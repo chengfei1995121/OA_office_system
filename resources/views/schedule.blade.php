@@ -19,7 +19,7 @@
 				<td>{{$re->end_time}}</td>
 				@if($re->status==0)
 					<td style="color: red;">未完成</td>
-					<td><a href="#">完成</a></td>
+					<td><a href="{{url('schedule',[$re->id])}}">完成</a></td>
 				@else
 					<td>已完成</td>
 					<td>完成</td>

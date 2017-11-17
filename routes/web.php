@@ -28,3 +28,4 @@ Route::get('deleteletter/{id}','write@deleteletter');
 Route::get('schedule','scheduleController@show');
 Route::get('schedule/addwork','scheduleController@addwork');
 Route::post('schedule','scheduleController@insertwork');
+Route::get('schedule/{id}','scheduleController@complete');
