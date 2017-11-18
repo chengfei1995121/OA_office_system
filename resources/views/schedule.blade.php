@@ -1,8 +1,6 @@
 @extends('home')
 @section('title','日程安排')
 @section('content')
-<div><a href="{{url('schedule/addwork')}}" class="add_work_link">添加事务</a></div>
-<div>
 <table class="table table-bordered table-hover">
 	<tr>
 		<td>事务</td>

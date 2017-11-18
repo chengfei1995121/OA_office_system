@@ -25,11 +25,21 @@
         日程安排
         <ul class="secondnav" id="id2">
         <li><a href="{{url('schedule')}}">日程表</a></li>
-        <li><a href="#">添加事务</a></li>
+        <li><a href="{{url('schedule/addwork')}}" class="add_work_link">添加事务</a></li>
         </ul>
         </li>
-        <li class="firstnav"><a href="#">课程表</a></li>
-        <li class="firstnav"><a href="#">文章</a></li>
+        <li class="firstnav" onclick="document.getElementById('id3').style.display='block'">课程表
+        <ul class="secondnav" id="id3">
+            <li><a href="#">添加课程</a></li>
+            <li><a href="{{url('course')}}">课程表</a></li>
+        </ul>
+        </li>
+        <li class="firstnav" onclick="document.getElementById('id4').style.display='block'">文章
+        <ul class="secondnav" id="id4">
+            <li><a href="#">添加文章</a></li>
+            <li><a href="#">文章列表</a></li>
+        </ul>
+        </li>
     </ul>
 </div>
 <div class="content">
