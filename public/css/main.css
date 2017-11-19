@@ -65,7 +65,7 @@
 	margin-top: 100px;
 }
 .writeletterform label{
-	width: 70px;
+	width: 80px;
 	font-size: 20px;
 }
 .writeletterform input{
@@ -82,7 +82,12 @@
 }
 .writeletterform button{
 	width: 100px;
-	margin-left: 60px;
+	margin-left: 70px;
+}
+.writeletterform select{
+	width:250px;
+	height: 40px;
+	display: inline;
 }
 .delete{
 	font-size: 20px;

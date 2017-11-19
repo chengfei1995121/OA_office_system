@@ -12,15 +12,30 @@
 	</tr>
 	@php
 		$num=count($result);
+		$jiesum=1;
 	@endphp
 	@for($i=0;$i<$num;$i++)
 	@php
 		$jie=$result[$i]->course_time;
 	@endphp
 	<tr>
-		<td>{{$arr[$jie-1]}}</td>
+		@while($jiesum<$jie)
+		<tr>
+		<td style="width: 20px;">{{$arr[$jiesum-1]}}</td>
+		<td><div class="course"></div></td>
+		<td><div class="course"></div></td>
+		<td><div class="course"></div></td>
+		<td><div class="course"></div></td>
+		<td><div class="course"></div></td>
+		</tr>
+		@php
+		$jiesum++;
+		@endphp
+		@endwhile
+		<td style="width: 20px;">{{$arr[$jie-1]}}</td>
 		@php
 			$sum=1;
+			$jiesum++;
 		@endphp
 		@for($j=$i;$j<$num&&$result[$j]->course_time==$jie;$j++)
 			@if($result[$j]->course_day==1)
@@ -33,12 +48,9 @@
 				@endphp
 			@endif
 			@if($result[$j]->course_day==2)
-				@php
-					$k=$sum;
-				@endphp
-				@while($k<2)
+				@while($sum<2)
 					@php 
-					$k++;
+					$sum++;
 					@endphp
 					<td><div class="course"><p></p></div></td>
 				@endwhile
@@ -51,12 +63,9 @@
 				@endphp
 			@endif
 			@if($result[$j]->course_day==3)
-				@php
-					$k=$sum;
-				@endphp
-				@while($k<3)
+				@while($sum<3)
 					@php 
-					$k++;
+					$sum++;
 					@endphp
 					<td><div class="course"><p></p></div></td>
 				@endwhile
@@ -69,12 +78,9 @@
 				@endphp
 			@endif
 			@if($result[$j]->course_day==4)
-				@php
-					$k=$sum;
-				@endphp
-				@while($k<4)
+				@while($sum<4)
 					@php 
-					$k++;
+					$sum++;
 					@endphp
 					<td><div class="course"><p></p></div></td>
 				@endwhile
@@ -87,12 +93,9 @@
 				@endphp
 			@endif
 			@if($result[$j]->course_day==5)
-				@php
-					$k=$sum;
-				@endphp
-				@while($k<5)
+				@while($sum<5)
 					@php 
-					$k++;
+					$sum++;
 					@endphp
 					<td><div class="course"><p></p></div></td>
 				@endwhile
@@ -119,5 +122,18 @@
 		@endwhile
 	</tr>
 	@endfor
+	@while($jie<7)
+		@php
+		$jie++;
+		@endphp
+		<tr>
+			<td>{{$arr[$jie-1]}}</td>
+			<td><div class="course"></div></td>
+			<td><div class="course"></div></td>
+			<td><div class="course"></div></td>
+			<td><div class="course"></div></td>
+			<td><div class="course"></div></td>
+		</tr>
+	@endwhile
 	</table>
 @endsection
