@@ -15,13 +15,13 @@ class clickadmin
      */
     public function handle($request, Closure $next)
     {
-        if($request->session()-has('aname'))
+        if($request->session()->has('aname'))
         {    
             return $next($request);
         }
         else
         {
-            return redirect('adminlogin');
+            return redirect('login');
         }
     }
 }
