@@ -5,6 +5,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <script src="{{ asset('js/app.js') }}"></script>
     <link rel="stylesheet" type="text/css" href="{{asset('css/main.css')}}">
+    <script src="{{asset('js/wangEditor.js')}}"></script>
 </head>
 <body>
 <div class="nav"><div class="title">琼台网络办公系统</div>
@@ -36,8 +37,8 @@
         </li>
         <li class="firstnav" onclick="document.getElementById('id4').style.display='block'">文章
         <ul class="secondnav" id="id4">
-            <li><a href="#">添加文章</a></li>
-            <li><a href="#">文章列表</a></li>
+            <li><a href="{{url('addarticle')}}">添加文章</a></li>
+            <li><a href="{{url('articlelist')}}">文章列表</a></li>
         </ul>
         </li>
     </ul>

@@ -33,6 +33,12 @@ Route::get('schedule/{id}','scheduleController@complete');
 Route::get('addcourse',function()
 	{
 		return view('addcourse');
-	})->middleware('clickadmin');
+	});
 Route::post('addcourse','courseController@addcourse')->middleware('course');
 Route::get('adderror','courseController@showerror');
+Route::get('articlelist','articlecontroller@show');
+Route::get('addarticle',function()
+{
+	return view('addarticle');
+});
+Route::post('addarticle','articlecontroller@addarticle');

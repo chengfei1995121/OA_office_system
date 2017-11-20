@@ -109,3 +109,20 @@
 .table{
 	text-align: center;
 }
+.article{
+	height: 50px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+.article label{
+	font-size: 25px;
+}
+.article .inputtitle{
+	height: 40px;
+	width: 600px;
+	margin-left: 10px;
+	border-radius: 4px;
+	border:1px solid #ccd0d2;
+	margin-top: -10px;
+	font-size: 20px;
+}
