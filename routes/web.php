@@ -42,3 +42,4 @@ Route::get('addarticle',function()
 	return view('addarticle');
 });
 Route::post('addarticle','articlecontroller@addarticle');
+Route::get('quit','quitcontroller@quit');

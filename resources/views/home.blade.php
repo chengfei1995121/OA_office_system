@@ -9,7 +9,7 @@
 </head>
 <body>
 <div class="nav"><div class="title">琼台网络办公系统</div>
-<div class="left"><a href="#">退出</a></div>
+<div class="left"><a href="{{url('quit')}}">退出</a></div>
 </div>
 <div class="sider">
 <div class="gongneng">功能导航</div>
