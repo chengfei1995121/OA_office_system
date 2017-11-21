@@ -36,10 +36,12 @@ Route::get('addcourse',function()
 	});
 Route::post('addcourse','courseController@addcourse')->middleware('course');
 Route::get('adderror','courseController@showerror');
-Route::get('articlelist','articlecontroller@show');
+Route::get('articlelist/{id?}','articlecontroller@show');
+Route::get('articledetail/{id}','articlecontroller@articledetail');
 Route::get('addarticle',function()
 {
 	return view('addarticle');
 });
 Route::post('addarticle','articlecontroller@addarticle');
+
 Route::get('quit','quitcontroller@quit');

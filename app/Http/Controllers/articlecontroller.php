@@ -7,10 +7,14 @@ use Illuminate\Support\Facades\DB;
 class articlecontroller extends Controller
 {
     //
-    public function show()
+    public function show($id=1)
     {
-    	$result=DB::select("select * from article order by id desc limit 10");
-    	return view('articlelist',['result'=>$result]);
+    	if($id>1)
+    		$start=($id-1)*2;
+    	else
+    		$start=0;
+    	$result=DB::select("select * from article order by id  limit ?,2",[$start]);
+    	return view('articlelist',['result'=>$result,'id'=>$id]);
     }
     public function addarticle(Request $request)
     {
@@ -22,5 +26,10 @@ class articlecontroller extends Controller
     	}
     	else
     		return "no";
+    }
+    public function articledetail($id)
+    {
+    	$result=DB::select("select * from article where id=?",[$id]);
+    	return view('articledetail',['result'=>$result]);
     }
 }
