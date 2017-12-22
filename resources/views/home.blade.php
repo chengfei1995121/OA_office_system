@@ -8,7 +8,7 @@
     <script src="{{asset('js/wangEditor.js')}}"></script>
 </head>
 <body>
-<div class="nav"><div class="title">琼台网络办公系统</div>
+<div class="nav"><div class="title">网络办公系统</div>
 <div class="left"><a href="{{url('quit')}}">退出</a></div>
 </div>
 <div class="sider">
@@ -39,6 +39,8 @@
         <ul class="secondnav" id="id4">
             <li><a href="{{url('addarticle')}}">添加文章</a></li>
             <li><a href="{{url('articlelist')}}">文章列表</a></li>
+            <li><a href="{{url('myarticle')}}">我的文章</a>
+            </li>
         </ul>
         </li>
     </ul>

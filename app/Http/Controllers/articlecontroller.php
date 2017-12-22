@@ -32,4 +32,44 @@ class articlecontroller extends Controller
     	$result=DB::select("select * from article where id=?",[$id]);
     	return view('articledetail',['result'=>$result]);
     }
+    public function myarticle($id=1)
+    {
+    	if($id>1)
+    		$start=($id-1)*2;
+    	else
+    		$start=0;
+
+    	$result=DB::select("select * from article where author=? order by id  limit ?,2",[session('uname'),$start]);
+    	return view('myarticle',['result'=>$result,'id'=>$id]);
+    }
+    public function updateview($id)
+    {
+    	$result=DB::select("select * from article where id=?",[$id]);
+    	return view('updatearticle',['result'=>$result]);
+    }
+    public function update(Request $request)
+    {
+    	$input=$request->all();
+    	$result=DB::update("update article set title=?,content=? where id=?",[$input['title'],$input['content'],$input['id']]);
+    	if($result)
+    	{
+    		return redirect('myarticle');
+    	}
+    	else
+    	{
+    		echo "no";
+    	}
+    }
+    public function deletearticle($id)
+    {
+    	$result=DB::delete("delete from article where id=?",[$id]);
+    	if($result)
+    	{
+    		return redirect('myarticle');
+    	}
+    	else
+    	{
+    		echo "no";
+    	}
+    }
 }

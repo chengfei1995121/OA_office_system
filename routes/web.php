@@ -43,5 +43,8 @@ Route::get('addarticle',function()
 	return view('addarticle');
 });
 Route::post('addarticle','articlecontroller@addarticle');
-
+Route::get('myarticle/{id?}','articlecontroller@myarticle');
+Route::get('updatearticle/{id}','articlecontroller@updateview');
+Route::post('updatearticle','articlecontroller@update');
+Route::get('deletearticle/{id}','articlecontroller@deletearticle');
 Route::get('quit','quitcontroller@quit');
