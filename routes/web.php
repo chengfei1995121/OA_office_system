@@ -30,12 +30,6 @@ Route::get('schedule','scheduleController@show');
 Route::get('schedule/addwork','scheduleController@addwork');
 Route::post('schedule','scheduleController@insertwork');
 Route::get('schedule/{id}','scheduleController@complete');
-Route::get('addcourse',function()
-	{
-		return view('addcourse');
-	});
-Route::post('addcourse','courseController@addcourse')->middleware('course');
-Route::get('adderror','courseController@showerror');
 Route::get('articlelist/{id?}','articlecontroller@show');
 Route::get('articledetail/{id}','articlecontroller@articledetail');
 Route::get('addarticle',function()
@@ -48,3 +42,16 @@ Route::get('updatearticle/{id}','articlecontroller@updateview');
 Route::post('updatearticle','articlecontroller@update');
 Route::get('deletearticle/{id}','articlecontroller@deletearticle');
 Route::get('quit','quitcontroller@quit');
+
+Route::get("adminlogin",'admincontroller@loginshow');
+Route::post('adminlogin','admincontroller@login');
+Route::get("courseplan",'admincontroller@courseplan');
+Route::get("coursedelete/{id}",'admincontroller@deletecourse');
+Route::get('addcourse',function()
+	{
+		return view('addcourse');
+	});
+Route::post('addcourse','admincontroller@addcourse')->middleware('course');
+Route::get('adderror','admincontroller@showerror');
+Route::get('manageteacher','admincontroller@managetcr');
+Route::get("deleteteacher/{id}",'admincontroller@deleteteacher');

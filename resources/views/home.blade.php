@@ -31,7 +31,6 @@
         </li>
         <li class="firstnav" onclick="document.getElementById('id3').style.display='block'">课程表
         <ul class="secondnav" id="id3">
-            <li><a href="{{url('addcourse')}}">添加课程</a></li>
             <li><a href="{{url('course')}}">课程表</a></li>
         </ul>
         </li>

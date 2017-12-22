@@ -12,13 +12,13 @@
 </head>
 <body>
 <div style="width:500px;margin:100px auto;">
-<form class="form-horizontal" method="POST" action="{{url('login')}}">
+<form class="form-horizontal" method="POST" action="{{url('adminlogin')}}">
 <input type="hidden" name="_token" value="{{csrf_token()}}">
 
   <div class="form-group">
     <label for="inputuser" class="col-sm-2 control-label">用户名</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="inputuser" placeholder="用户名" name="name">
+      <input type="text" class="form-control" id="inputuser" placeholder="用户名" name="aname">
     </div>
   </div>
   <div class="form-group">
@@ -33,7 +33,6 @@
         <label>
           <input type="checkbox"> 记住我
         </label>
-        <a href="{{url('adminlogin')}}" style="float: right;">管理员登录</a>
       </div>
     </div>
   </div>

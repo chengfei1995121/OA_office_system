@@ -1,4 +1,4 @@
-@extends('home')
+@extends('adminhome')
 @section('title', '添加课程')
 @section('content')
 <form method="post" action="{{url('addcourse')}}" class="form-horizontal writeletterform">
