@@ -9,7 +9,11 @@
 	</div>
 	<div class="form-group">
 		<label>任课老师</label>
-		<input type="text" name="course_teacher" class="from-control">
+		<select class="form-control" name="course_teacher">
+		@foreach($result as $r)
+		<option>{{$r->realname}}</option>
+		@endforeach
+		</select>
 	</div>
 	<div class="form-group">
 		<label>班级</label>

@@ -139,7 +139,12 @@ class admincontroller extends Controller
     	}
     	else
     	{
-    		
+
     	}
+    }
+    public function showaddcourse()
+    {
+    	$result=DB::select("select * from members");
+    	return view('addcourse',['result'=>$result]);
     }
 }

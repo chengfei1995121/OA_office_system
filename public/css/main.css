@@ -1,3 +1,6 @@
+body{
+	background-image: url(school.jpg);
+}
 .nav{
 	height: 70px;
 	background-color: #38464f;

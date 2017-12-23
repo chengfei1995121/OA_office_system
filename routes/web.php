@@ -47,10 +47,7 @@ Route::get("adminlogin",'admincontroller@loginshow');
 Route::post('adminlogin','admincontroller@login');
 Route::get("courseplan",'admincontroller@courseplan');
 Route::get("coursedelete/{id}",'admincontroller@deletecourse');
-Route::get('addcourse',function()
-	{
-		return view('addcourse');
-	});
+Route::get('addcourse','admincontroller@showaddcourse');
 Route::post('addcourse','admincontroller@addcourse')->middleware('course');
 Route::get('adderror','admincontroller@showerror');
 Route::get('manageteacher','admincontroller@managetcr');
