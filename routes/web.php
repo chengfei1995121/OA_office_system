@@ -55,3 +55,13 @@ Route::post('addcourse','admincontroller@addcourse')->middleware('course');
 Route::get('adderror','admincontroller@showerror');
 Route::get('manageteacher','admincontroller@managetcr');
 Route::get("deleteteacher/{id}",'admincontroller@deleteteacher');
+Route::get('department','admincontroller@depmanage');
+Route::get('add_department',function()
+{
+	return view('adddep');
+
+	});
+Route::post('add_department','admincontroller@add_department');
+Route::get('delete_dep/{id}','admincontroller@delete_dep');
+Route::get('managearticle/{id?}','admincontroller@managearticle');
+Route::get('adeletearticle/{id}','admincontroller@deletearticle');

@@ -54,7 +54,7 @@ class admincontroller extends Controller
     }
     public function managetcr()
     {
-    	$result=DB::select("select * from members");
+    	$result=DB::select("select * from members,managements where members.manageid=managements.manageid");
     	return view('teacher',['result'=>$result]);
     }
     public function deleteteacher($id)
@@ -63,6 +63,53 @@ class admincontroller extends Controller
     	if($result)
     	{
     		return redirect('manageteacher');
+    	}
+    }
+    public function depmanage()
+    {
+    	$result=DB::select("select * from managements");
+    	return view('department',['result'=>$result]);
+    }
+    public function add_department(Request $request)
+    {
+    	$input=$request->all();
+    	$result=DB::insert("insert into managements(manageid,managename,managetel) values(?,?,?)",[$input['dep_id'],$input['dep_name'],$input['dep_tel']]);
+    	if($result)
+    	{
+    		return redirect('department');
+    	}
+    	else
+    	{
+
+    	}
+    }
+    public function delete_dep($id)
+    {
+    	$result=DB::delete("delete from managements where id=?",[$id]);
+    	if($result)
+    	{
+    		return redirect('department');
+    	}
+    	else
+    	{
+
+    	}
+    }
+    public function managearticle($id=1)
+    {
+    	if($id>1)
+    		$start=($id-1)*2;
+    	else
+    		$start=0;
+    	$result=DB::select("select * from article order by id  limit ?,2",[$start]);
+    	return view('managearticle',['result'=>$result,'id'=>$id]);
+    }
+    public function deletearticle($id)
+    {
+    	$result=DB::delete('delete from article where id=?',[$id]);
+    	if($result)
+    	{
+    		return redirect('managearticle');
     	}
     }
 }

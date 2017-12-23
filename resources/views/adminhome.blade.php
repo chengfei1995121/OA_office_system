@@ -16,8 +16,8 @@
     <ul>
         <li class="firstnav"><a href="{{url('courseplan')}}">课程安排</a></li>
         <li class="firstnav"><a href="{{url('manageteacher')}}">教师管理</a></li>
-        <li class="firstnav"><a href="#">文章管理</a></li>
-        <li class="firstnav"><a href="#">系部管理</a></li>
+        <li class="firstnav"><a href="{{url('managearticle')}}">文章管理</a></li>
+        <li class="firstnav"><a href="{{url('department')}}">系部管理</a></li>
         <li class="firstnav"><a href="#">班级管理</a></li>
     </ul>
 </div>

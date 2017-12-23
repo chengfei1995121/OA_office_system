@@ -12,7 +12,7 @@
 	<tr>
 		<td>{{$r->username}}</td>
 		<td>{{$r->realname}}</td>
-		<td>{{$r->manageid}}</td>
+		<td>{{$r->managename}}</td>
 		<td><a href="{{url('deleteteacher',[$r->id])}}">删除</a></td>
 	</tr>
 	@endforeach
