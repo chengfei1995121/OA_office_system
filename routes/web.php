@@ -65,3 +65,10 @@ Route::post('add_department','admincontroller@add_department');
 Route::get('delete_dep/{id}','admincontroller@delete_dep');
 Route::get('managearticle/{id?}','admincontroller@managearticle');
 Route::get('adeletearticle/{id}','admincontroller@deletearticle');
+Route::get('classsets','admincontroller@classsets');
+Route::get('addclass',function()
+{
+	return view('addclass');
+});
+Route::post('addclass','admincontroller@addclass');
+Route::get('deletecladd/{id}','admincontroller@deleteclass');

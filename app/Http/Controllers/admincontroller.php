@@ -112,4 +112,34 @@ class admincontroller extends Controller
     		return redirect('managearticle');
     	}
     }
+    public function classsets()
+    {
+    	$result=DB::select("select * from classsets");
+    	return view('classet',['result'=>$result]);
+    }
+    public function addclass(Request $request)
+    {
+    	$input=$request->all();
+    	$result=DB::insert("insert into classsets(gradeid,classname,classnumber) values(?,?,?)",[$input['id'],$input['classname'],$input['classnumber']]);
+    	if($result)
+    	{
+    		return redirect('classsets');
+    	}
+    	else
+    	{
+
+    	}
+    }
+    public function deleteclass($id)
+    {
+    	$result=DB::delete("delete from classsets where id=?",['$id']);
+    	if($result)
+    	{
+    		return redirect('classsets');
+    	}
+    	else
+    	{
+    		
+    	}
+    }
 }
